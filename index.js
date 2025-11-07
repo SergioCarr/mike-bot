@@ -25,7 +25,7 @@ function setAuthHeader(token) {
     else delete axios.defaults.headers.common['Authorization'];
 }
 
-// validate token helper
+// validate token function
 function isTokenExpired(saved) {
     if (!saved || !saved.expiresIn || !saved.obtainedAt) return false;
     // expiresIn assumed seconds; convert to ms
